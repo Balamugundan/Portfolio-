@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balamugundan I — Developer & Technology Enthusiast</title>
+  <meta name="description" content="Personal portfolio of Balamugundan I — developer, technology enthusiast, project builder, and competition participant." />
+  <meta name="theme-color" content="#F5F0E8" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Balamugundan I — Developer & Technology Enthusiast" />
+  <meta property="og:description" content="Personal portfolio of Balamugundan I — developer, technology enthusiast, project builder, and competition participant." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  
+  <!-- Typography: Playfair Display (editorial) + Inter (clean) + Space Mono (technical) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Cinematic Intro Overlay -->
+  <div id="intro" class="intro-curtain">
+    <div class="intro-glow" aria-hidden="true"></div>
+    <div class="intro-content">
+      <div class="intro-rule" aria-hidden="true"></div>
+      <h1 class="intro-name" id="introName">BALAMUGUNDAN I</h1>
+      <p class="intro-line">BUILDING IDEAS INTO EXPERIENCES</p>
+    </div>
+    <button id="introSkip" class="intro-skip" hidden aria-label="Skip introduction">SKIP &rarr;</button>
+  </div>
+
+  <!-- Editorial Slim Navigation Bar (Integrated with Overall Aesthetic) -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner container">
+      <!-- Brand / Monogram -->
+      <a href="#home" class="header-brand" data-goto="home" aria-label="Balamugundan I - Go to top">
+        <span class="brand-text">BALAMUGUNDAN<span>.</span></span>
+      </a>
+      
+      <!-- Editorial Navigation Links -->
+      <nav class="header-nav" aria-label="Primary Navigation">
+        <button data-goto="home" class="nav-item active">
+          <span class="nav-text">Home</span>
+          <span class="nav-indicator"></span>
+        </button>
+        <button data-goto="about" class="nav-item">
+          <span class="nav-text">About</span>
+          <span class="nav-indicator"></span>
+        </button>
+        <button data-goto="journey" class="nav-item">
+          <span class="nav-text">Journey</span>
+          <span class="nav-indicator"></span>
+        </button>
+        <button data-goto="skills" class="nav-item">
+          <span class="nav-text">Skills</span>
+          <span class="nav-indicator"></span>
+        </button>
+        <button data-goto="projects" class="nav-item">
+          <span class="nav-text">Projects</span>
+          <span class="nav-indicator"></span>
+        </button>
+        <button data-goto="achievements" class="nav-item">
+          <span class="nav-text">Achievements</span>
+          <span class="nav-indicator"></span>
+        </button>
+        <button data-goto="education" class="nav-item">
+          <span class="nav-text">Education</span>
+          <span class="nav-indicator"></span>
+        </button>
+        <button data-goto="contact" class="nav-item">
+          <span class="nav-text">Contact</span>
+          <span class="nav-indicator"></span>
+        </button>
+      </nav>
+
+      <!-- Mobile Compact Menu Trigger -->
+      <button class="header-mobile-toggle" id="headerMobileToggle" aria-expanded="false" aria-label="Open navigation menu">
+        <span class="toggle-dot"></span>
+        <span class="toggle-text">MENU</span>
+      </button>
+    </div>
+
+    <!-- Mobile Editorial Drawer Menu -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="drawer-backdrop" id="drawerBackdrop"></div>
+      <div class="drawer-panel">
+        <div class="drawer-top">
+          <span class="drawer-brand">BALAMUGUNDAN<span>.</span></span>
+          <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+        </div>
+        
+        <div class="drawer-links">
+          <button data-goto="home" class="drawer-link active">
+            <span class="d-num">01</span><span class="d-label">Home</span>
+          </button>
+          <button data-goto="about" class="drawer-link">
+            <span class="d-num">02</span><span class="d-label">About</span>
+          </button>
+          <button data-goto="journey" class="drawer-link">
+            <span class="d-num">03</span><span class="d-label">Journey</span>
+          </button>
+          <button data-goto="skills" class="drawer-link">
+            <span class="d-num">04</span><span class="d-label">Skills</span>
+          </button>
+          <button data-goto="projects" class="drawer-link">
+            <span class="d-num">05</span><span class="d-label">Projects</span>
+          </button>
+          <button data-goto="achievements" class="drawer-link">
+            <span class="d-num">06</span><span class="d-label">Achievements</span>
+          </button>
+          <button data-goto="education" class="drawer-link">
+            <span class="d-num">07</span><span class="d-label">Education</span>
+          </button>
+          <button data-goto="contact" class="drawer-link">
+            <span class="d-num">08</span><span class="d-label">Contact</span>
+          </button>
+        </div>
+
+        <div class="drawer-bottom">
+          <div class="drawer-resume-btns">
+            <a href="Balamugundan_Resume.pdf" download="Balamugundan_Resume.pdf" class="btn small primary download-resume-btn">DOWNLOAD RESUME &darr;</a>
+            <a href="Balamugundan_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn small on-light-btn">VIEW RESUME ONLINE &rarr;</a>
+          </div>
+          <p class="drawer-info">balamugundan4@gmail.com &bull; THANJAVUR, TAMIL NADU, INDIA</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. Hero Section (Clean, Immersive Split Layout) -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        
+        <!-- Left Column: Personal Identity & Messaging -->
+        <div class="hero-left">
+          <div class="hero-eyebrow hero-reveal" style="--d: 1;">
+            <span class="hero-loc-dot"></span>
+            <span>THANJAVUR, TAMIL NADU, INDIA</span>
+          </div>
+
+          <p class="hero-greeting hero-reveal" style="--d: 2;">Hi, I'm</p>
+          <h1 class="hero-name hero-reveal" style="--d: 3;" id="heroName">BALAMUGUNDAN I</h1>
+          
+          <div class="hero-role-line hero-reveal" style="--d: 4;">
+            <span>Developer</span>
+            <span class="hero-dot">&bull;</span>
+            <span>Builder</span>
+            <span class="hero-dot">&bull;</span>
+            <span id="roleAnimated" class="hero-role-animated">Tech Enthusiast</span>
+          </div>
+
+          <p class="hero-statement hero-reveal" style="--d: 5;">
+            I don&rsquo;t just build projects. I build experiences, solve problems, and turn ideas into something real.
+          </p>
+
+          <div class="hero-actions hero-reveal" style="--d: 6;">
+            <a href="#projects" class="btn primary" data-goto="projects">EXPLORE MY WORK</a>
+            <a href="Balamugundan_Resume.pdf" download="Balamugundan_Resume.pdf" class="btn on-light-btn download-resume-btn">DOWNLOAD RESUME</a>
+          </div>
+
+          <div class="hero-resume-row hero-reveal" style="--d: 7;">
+            <a href="Balamugundan_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-ghost">VIEW RESUME ONLINE &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Right Column: Prominent Personal Photo Frame -->
+        <div class="hero-right">
+          <div class="profile-art-container hero-reveal" style="--d: 4;" id="profilePhotoContainer">
+            <div class="profile-art-frame">
+              <img 
+                id="profilePhotoImg"
+                src="public/images/profile.jpeg" 
+                alt="Balamugundan I - Personal Photo" 
+                class="profile-photo"
+                onerror="this.onerror=null; this.src='assets/images/profile.jpg'; this.onerror=() => showProfilePlaceholder();"
+              />
+              
+              <!-- Elegant Typography Fallback (shows before user copies personal photo) -->
+              <div id="profilePlaceholder" class="profile-photo-placeholder" style="display: none;">
+                <div class="ph-monogram">BI</div>
+                <span class="ph-label">BALAMUGUNDAN I</span>
+                <span class="ph-tag">Developer &bull; Builder</span>
+                <span class="ph-path">/public/images/profile.jpg</span>
+              </div>
+            </div>
+
+            <!-- Floating Accent Badge -->
+            <div class="profile-badge hero-reveal" style="--d: 8;">
+              <span class="badge-dot"></span>
+              <span>PORTFOLIO 2026</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="scroll-hint hero-reveal" style="--d: 9;" aria-hidden="true">SCROLL TO EXPLORE</div>
+    </section>
+
+    <!-- 2. About Me Section -->
+    <section id="about">
+      <div class="container">
+        <p class="eyebrow reveal">About</p>
+        <h2 class="reveal section-title">More than a developer.</h2>
+
+        <div class="about-layout">
+          <div class="reveal">
+            <p class="about-copy">
+              I&rsquo;m a Computer Science / Technology student from Tamil Nadu who enjoys building real-world projects, participating in competitions, presenting ideas, and continuously learning.
+            </p>
+            <p class="about-copy">
+              What draws me in isn&rsquo;t just writing code &mdash; it&rsquo;s the moment an idea stops being a concept and becomes something tangible and functional. I take part in competitions and treat every stage presentation and project challenge as an opportunity to build deeper problem-solving craft.
+            </p>
+          </div>
+
+          <div class="reveal about-interests">
+            <div class="interest-item"><span class="interest-num">01</span><span>Web Development</span></div>
+            <div class="interest-item"><span class="interest-num">02</span><span>AI / Intelligent Systems</span></div>
+            <div class="interest-item"><span class="interest-num">03</span><span>Blockchain</span></div>
+            <div class="interest-item"><span class="interest-num">04</span><span>Problem-Solving</span></div>
+            <div class="interest-item"><span class="interest-num">05</span><span>Technology Concepts</span></div>
+            <div class="interest-item"><span class="interest-num">06</span><span>Innovative Project Ideas</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. My Journey Section -->
+    <section id="journey">
+      <div class="container">
+        <p class="eyebrow reveal">My Journey</p>
+        <h2 class="reveal section-title">A path of continuous building.</h2>
+
+        <div class="journey-track">
+          <div class="journey-item reveal">
+            <div class="journey-dot"></div>
+            <span class="journey-step">STAGE 01</span>
+            <h3>Student</h3>
+            <p>Began with core curiosity about computers, systems, and how digital ideas come together.</p>
+          </div>
+
+          <div class="journey-item reveal">
+            <div class="journey-dot"></div>
+            <span class="journey-step">STAGE 02</span>
+            <h3>Learning</h3>
+            <p>Mastered modern web tools, programming languages, and computational problem-solving principles.</p>
+          </div>
+
+          <div class="journey-item reveal">
+            <div class="journey-dot"></div>
+            <span class="journey-step">STAGE 03</span>
+            <h3>Building</h3>
+            <p>Turned conceptual understanding into working software, responsive interfaces, and practical systems.</p>
+          </div>
+
+          <div class="journey-item reveal">
+            <div class="journey-dot"></div>
+            <span class="journey-step">STAGE 04</span>
+            <h3>Participating</h3>
+            <p>Stepped up to tech symposiums, paper presentations, and competitive technical challenges.</p>
+          </div>
+
+          <div class="journey-item reveal">
+            <div class="journey-dot"></div>
+            <span class="journey-step">STAGE 05</span>
+            <h3>Winning</h3>
+            <p>Earned first, second, and third prize honors for innovative concepts and stage delivery.</p>
+          </div>
+
+          <div class="journey-item reveal">
+            <div class="journey-dot"></div>
+            <span class="journey-step">STAGE 06</span>
+            <h3>Growing</h3>
+            <p>Continuing to iterate, expand capabilities, and build high-impact digital experiences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <p class="eyebrow reveal">Capabilities &amp; Tools</p>
+        <h2 class="reveal section-title">WHAT I KNOW.</h2>
+        <p class="skills-sub reveal">Languages, technologies, tools, and skills I use to turn ideas into working experiences.</p>
+        <div class="skills-editorial" id="skillsContainer"></div>
+      </div>
+    </section>
+
+    <!-- 5. Projects Section (Magazine / Editorial Layout) -->
+    <section id="projects">
+      <div class="container">
+        <p class="eyebrow reveal">Selected Works</p>
+        <h2 class="reveal section-title">Ideas, built &amp; presented.</h2>
+        <div id="projectsMagazine" class="projects-magazine"></div>
+      </div>
+    </section>
+
+    <!-- 6. Achievements Section (Single Headings, Visible Photo Previews) -->
+    <section id="achievements">
+      <div class="container">
+        <p class="eyebrow reveal">Hall of Achievements</p>
+        <h2 class="reveal section-title">Proof of the journey.</h2>
+        <p class="achievements-sub reveal">Three moments that made the journey worth remembering.</p>
+
+        <!-- Dynamic Editorial Gallery Rendered via JS -->
+        <div id="achievementEditorial" class="achievement-editorial"></div>
+
+        <!-- TechTalks / Special Recognition Strip (No Duplicate 1st Prize heading) -->
+        <div class="achievement-milestone reveal">
+          <div class="milestone-badge">&#9733; ADDITIONAL RECOGNITION</div>
+          <div class="milestone-content">
+            <h4>TechTalks Competition &mdash; 1st Place</h4>
+            <p>Awarded first place at TechTalks for technical communication, ideation, and delivery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Education Section -->
+    <section id="education">
+      <div class="container">
+        <p class="eyebrow reveal">Education</p>
+        <h2 class="reveal section-title">Where it&rsquo;s taking shape.</h2>
+        <div class="reveal edu-card">
+          <div class="edu-icon">&#9670;</div>
+          <div>
+           <h3>Periyar Maniammai Institute of Science and Technology</h3>
+            <p>B.Tech in Computer Science and Engineering</p>
+            <p class="education-meta">
+              Currently Pursuing &nbsp;•&nbsp; Department of Computer Science and Engineering
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. What I Do Section -->
+    <section id="what-i-do">
+      <div class="container">
+        <p class="eyebrow reveal">What I Do</p>
+        <h2 class="reveal section-title">Five things I keep coming back to.</h2>
+        <div id="whatIDoList" class="what-list"></div>
+      </div>
+    </section>
+
+    <!-- 9. Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <p class="eyebrow reveal">Contact</p>
+        <h2 class="reveal section-title">Let&rsquo;s build something great.</h2>
+        <p class="reveal contact-sub">Have an idea, project, or opportunity?<br />Let&rsquo;s talk.</p>
+
+        <div class="reveal contact-ctas">
+          <button id="copyEmailBtn" class="btn primary">
+            <span id="copyEmailLabel">balamugundan4@gmail.com</span>
+          </button>
+          <a href="tel:7094310380" class="btn">+91 7094310380</a>
+          <a href="https://www.linkedin.com/in/balamugundan" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
+          <a href="https://github.com/Balamugundan" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+        </div>
+
+        <div class="reveal contact-resume">
+          <a href="Balamugundan_Resume.pdf" download="Balamugundan_Resume.pdf" class="btn download-resume-btn">DOWNLOAD RESUME</a>
+          <a href="Balamugundan_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn">VIEW RESUME ONLINE &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 10. Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-center">
+        <p class="footer-name">BALAMUGUNDAN I</p>
+        <p class="footer-tag">BUILD. LEARN. CREATE. REPEAT.</p>
+        <p class="footer-copy">&copy; 2026 Balamugundan I &bull; THANJAVUR, TAMIL NADU, INDIA</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/balamugundan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+        <a href="https://github.com/Balamugundan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">gh</a>
+        <a href="mailto:balamugundan4@gmail.com" aria-label="Email">@</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Case-Study Modal -->
+  <div id="projectModal" class="modal-overlay" hidden>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close case study">&times;</button>
+      <p class="eyebrow" id="modalIndex"></p>
+      <h2 id="modalTitle" class="modal-title"></h2>
+      <p id="modalTagline" class="modal-tagline"></p>
+      <div class="modal-image-wrap">
+        <img id="modalImage" alt="" loading="lazy" />
+      </div>
+      <div class="modal-grid">
+        <div><h3>PROBLEM</h3><p id="modalProblem"></p></div>
+        <div><h3>SOLUTION</h3><p id="modalSolution"></p></div>
+        <div><h3>MY CONTRIBUTION</h3><p id="modalContribution"></p></div>
+        <div><h3>KEY FEATURES</h3><ul id="modalFeatures"></ul></div>
+      </div>
+      <div id="modalTech" class="modal-tech"></div>
+      <div id="modalLinks" class="modal-links"></div>
+    </div>
+  </div>
+
+  <!-- Achievement Lightbox -->
+  <div id="lightbox" class="lightbox-overlay" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close gallery">&times;</button>
+    <p id="lightboxCounter" class="lightbox-counter"></p>
+    <div class="lightbox-stage">
+      <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous photo">&larr;</button>
+      <img id="lightboxImage" alt="" />
+      <button class="lightbox-nav next" id="lightboxNext" aria-label="Next photo">&rarr;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
