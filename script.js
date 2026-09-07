@@ -583,7 +583,7 @@ function renderProjects() {
             class="project-mag-img"
             loading="lazy"
             onload="const ph = this.parentElement.querySelector('.proj-img-placeholder'); if (ph) ph.remove();"
-            onerror="this.onerror=null; this.src='${p.fallbackImage}'; this.onerror=()=>{ this.remove(); };"
+            onerror="this.onerror=null; const ph = this.parentElement.querySelector('.proj-img-placeholder'); if (ph) ph.style.display='flex'; this.remove();"
           />
           <div class="proj-img-placeholder">
             <span class="proj-num">${p.index}</span>
@@ -641,12 +641,9 @@ function openProjectModal(id) {
   img.alt = `${p.name} preview`;
   img.onerror = () => {
     img.onerror = null;
-    img.src = p.fallbackImage;
-    img.onerror = () => {
-      img.src =
-        "data:image/svg+xml;utf8," +
-        encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='920' height='517'><rect width='100%' height='100%' fill='#26221C'/><text x='50%' y='50%' fill='#c9a127' font-family='sans-serif' font-size='24' text-anchor='middle' dy='.3em'>${p.name}</text></svg>`);
-    };
+    img.src =
+      "data:image/svg+xml;utf8," +
+      encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='920' height='517'><rect width='100%' height='100%' fill='#26221C'/><text x='50%' y='50%' fill='#c9a127' font-family='sans-serif' font-size='24' text-anchor='middle' dy='.3em'>${p.name}</text></svg>`);
   };
 
   document.getElementById("modalProblem").textContent = p.problem;
@@ -712,9 +709,9 @@ function renderAchievements() {
             <img 
               src="${imgObj.src}" 
               alt="${imgObj.alt}" 
-              class="aph-img"
+              class="aph-img" 
               loading="lazy"
-              onerror="this.onerror=null; this.src='${imgObj.fallback}'; this.onerror=()=>{ this.style.display='none'; const ph = this.parentElement.querySelector('.aph-placeholder'); if (ph) ph.style.display='flex'; };"
+              onerror="this.onerror=null; this.style.display='none'; const ph = this.parentElement.querySelector('.aph-placeholder'); if (ph) ph.style.display='flex';"
             />
             <div class="aph-placeholder" style="display: none;">
               <span class="aph-icon">&#9671;</span>
@@ -797,12 +794,9 @@ function updateLightboxImage() {
     img.alt = currentObj.alt || `${lightboxState.title} photo ${lightboxState.index + 1}`;
     img.onerror = () => {
       img.onerror = null;
-      img.src = currentObj.fallback;
-      img.onerror = () => {
-        img.src =
-          "data:image/svg+xml;utf8," +
-          encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='880' height='660'><rect width='100%' height='100%' fill='#26221C'/><text x='50%' y='50%' fill='#c9a127' font-family='sans-serif' font-size='22' text-anchor='middle' dy='.3em'>${lightboxState.title} &bull; Photo ${lightboxState.index + 1}</text></svg>`);
-      };
+      img.src =
+        "data:image/svg+xml;utf8," +
+        encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='880' height='660'><rect width='100%' height='100%' fill='#26221C'/><text x='50%' y='50%' fill='#c9a127' font-family='sans-serif' font-size='22' text-anchor='middle' dy='.3em'>${lightboxState.title} &bull; Photo ${lightboxState.index + 1}</text></svg>`);
     };
     img.classList.add("show");
   }, 120);
@@ -898,8 +892,8 @@ function initResumeDownload() {
   downloadBtns.forEach((btn) => {
     btn.addEventListener("click", async (e) => {
       e.preventDefault();
-      const filename = "Balamugundan_Resume.pdf";
-      const filePath = btn.getAttribute("href") || filename;
+      const filename = "resume.html";
+      const filePath = btn.getAttribute("href") || "/resume.html";
 
       try {
         const res = await fetch(filePath);
