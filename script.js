@@ -21,8 +21,7 @@ const projects = [
     ],
     github: "https://github.com/Balamugundan/Smartbin-Monitor",
     demo: "",
-    image: "public/projects/dustbin.png",
-    fallbackImage: "assets/projects/dustbin.png"
+    image: "/projects/dustbin.png"
   },
   {
     id: "mediguard",
@@ -40,8 +39,7 @@ const projects = [
     ],
     github: "",
     demo: "https://mediguard-3.vercel.app/",
-    image: "public/projects/mediguard.png",
-    fallbackImage: "assets/projects/mediguard.png"
+    image: "/projects/mediguard.png"
   },
   {
     id: "blockchain-complaint",
@@ -59,8 +57,7 @@ const projects = [
     ],
     github: "https://github.com/Balamugundan/Blockchain-Complaint-System",
     demo: "",
-    image: "public/projects/blockchain-complaint.png",
-    fallbackImage: "assets/projects/blockchain-complaint.png"
+    image: "/projects/blockchain-complaint.png"
   },
   {
     id: "rainwater-harvesting",
@@ -78,8 +75,7 @@ const projects = [
     ],
     github: "https://github.com/Balamugundan/AI-based-Rainwater-Harewesting",
     demo: "",
-    image: "public/projects/rainwater-harvesting.png",
-    fallbackImage: "assets/projects/rainwater-harvesting.png"
+    image: "/projects/rainwater-harvesting.png"
   },
   {
     id: "kulfi-corner",
@@ -97,8 +93,7 @@ const projects = [
     ],
     github: "",
     demo: "https://your-kulficorner-demo.vercel.app",
-    image: "public/projects/kulfi-corner.png",
-    fallbackImage: "assets/projects/kulfi-corner.png"
+    image: "/projects/kulfi-corner.png"
   },
   {
     id: "grandshopping",
@@ -116,8 +111,7 @@ const projects = [
     ],
     github: "",
     demo: "https://grand-shopping.vercel.app/",
-    image: "public/projects/grandshopping.png",
-    fallbackImage: "assets/projects/grandshopping.png"
+    image: "/projects/grandshopping.png"
   }
 ];
 
@@ -130,9 +124,9 @@ const achievements = [
     detail: "1st Prize &ndash; Paper Presentation (Healthcare &amp; MediGuard Project)",
     countLabel: "3 PHOTOGRAPHS",
     images: [
-      { src: "public/achievements/first-prize/first-prize-1.jpg", alt: "First Prize Photo 1", fallback: "assets/achievements/first-prize/first-prize-1.jpg" },
-      { src: "public/achievements/first-prize/first-prize-2.jpg", alt: "First Prize Photo 2", fallback: "assets/achievements/first-prize/first-prize-2.jpg" },
-      { src: "public/achievements/first-prize/first-prize-3.jpg", alt: "First Prize Photo 3", fallback: "assets/achievements/first-prize/first-prize-3.jpg" }
+      { src: "/achievements/first-prize/first-prize-1.jpg", alt: "First Prize Photo 1" },
+      { src: "/achievements/first-prize/first-prize-2.jpg", alt: "First Prize Photo 2" },
+      { src: "/achievements/first-prize/first-prize-3.jpg", alt: "First Prize Photo 3" }
     ]
   },
   {
@@ -142,9 +136,9 @@ const achievements = [
     detail: "Awarded Second Prize in technical competition.",
     countLabel: "3 PHOTOGRAPHS",
     images: [
-      { src: "public/achievements/second-prize/second-prize-1.jpg", alt: "Second Prize Photo 1", fallback: "assets/achievements/second-prize/second-prize-1.jpg" },
-      { src: "public/achievements/second-prize/second-prize-2.jpg", alt: "Second Prize Photo 2", fallback: "assets/achievements/second-prize/second-prize-2.jpg" },
-      { src: "public/achievements/second-prize/second-prize-3.jpg", alt: "Second Prize Photo 3", fallback: "assets/achievements/second-prize/second-prize-3.jpg" }
+      { src: "/achievements/second-prize/second-prize-1.jpg", alt: "Second Prize Photo 1" },
+      { src: "/achievements/second-prize/second-prize-2.jpg", alt: "Second Prize Photo 2" },
+      { src: "/achievements/second-prize/second-prize-3.jpg", alt: "Second Prize Photo 3" }
     ]
   },
   {
@@ -154,8 +148,8 @@ const achievements = [
     detail: "Awarded Third Prize in technical symposium / event.",
     countLabel: "2 PHOTOGRAPHS",
     images: [
-      { src: "public/achievements/third-prize/third-prize-1.jpg", alt: "Third Prize Photo 1", fallback: "assets/achievements/third-prize/third-prize-1.jpg" },
-      { src: "public/achievements/third-prize/third-prize-2.jpg", alt: "Third Prize Photo 2", fallback: "assets/achievements/third-prize/third-prize-2.jpg" }
+      { src: "/achievements/third-prize/third-prize-1.jpg", alt: "Third Prize Photo 1" },
+      { src: "/achievements/third-prize/third-prize-2.jpg", alt: "Third Prize Photo 2" }
     ]
   }
 ];

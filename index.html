@@ -12,14 +12,14 @@
   <meta property="og:description" content="Personal portfolio of Balamugundan I — developer, technology enthusiast, project builder, and competition participant." />
   <meta property="og:type" content="website" />
 
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   
   <!-- Typography: Playfair Display (editorial) + Inter (clean) + Space Mono (technical) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
 
@@ -126,8 +126,8 @@
 
         <div class="drawer-bottom">
           <div class="drawer-resume-btns">
-            <a href="Balamugundan_Resume.pdf" download="Balamugundan_Resume.pdf" class="btn small primary download-resume-btn">DOWNLOAD RESUME &darr;</a>
-            <a href="Balamugundan_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn small on-light-btn">VIEW RESUME ONLINE &rarr;</a>
+            <a href="/resume.html" download="resume.html" class="btn small primary download-resume-btn">DOWNLOAD RESUME &darr;</a>
+            <a href="/resume.html" target="_blank" rel="noopener noreferrer" class="btn small on-light-btn">VIEW RESUME ONLINE &rarr;</a>
           </div>
           <p class="drawer-info">balamugundan4@gmail.com &bull; THANJAVUR, TAMIL NADU, INDIA</p>
         </div>
@@ -165,11 +165,11 @@
 
           <div class="hero-actions hero-reveal" style="--d: 6;">
             <a href="#projects" class="btn primary" data-goto="projects">EXPLORE MY WORK</a>
-            <a href="Balamugundan_Resume.pdf" download="Balamugundan_Resume.pdf" class="btn on-light-btn download-resume-btn">DOWNLOAD RESUME</a>
+            <a href="/resume.html" download="resume.html" class="btn on-light-btn download-resume-btn">DOWNLOAD RESUME</a>
           </div>
 
           <div class="hero-resume-row hero-reveal" style="--d: 7;">
-            <a href="Balamugundan_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-ghost">VIEW RESUME ONLINE &rarr;</a>
+            <a href="/resume.html" target="_blank" rel="noopener noreferrer" class="btn-ghost">VIEW RESUME ONLINE &rarr;</a>
           </div>
         </div>
 
@@ -179,10 +179,10 @@
             <div class="profile-art-frame">
               <img 
                 id="profilePhotoImg"
-                src="public/images/profile.jpeg" 
+                src="/images/profile.jpeg" 
                 alt="Balamugundan I - Personal Photo" 
                 class="profile-photo"
-                onerror="this.onerror=null; this.src='assets/images/profile.jpg'; this.onerror=() => showProfilePlaceholder();"
+                onerror="this.onerror=null; showProfilePlaceholder();"
               />
               
               <!-- Elegant Typography Fallback (shows before user copies personal photo) -->
@@ -190,7 +190,7 @@
                 <div class="ph-monogram">BI</div>
                 <span class="ph-label">BALAMUGUNDAN I</span>
                 <span class="ph-tag">Developer &bull; Builder</span>
-                <span class="ph-path">/public/images/profile.jpg</span>
+                <span class="ph-path">/images/profile.jpeg</span>
               </div>
             </div>
 
@@ -370,8 +370,8 @@
         </div>
 
         <div class="reveal contact-resume">
-          <a href="Balamugundan_Resume.pdf" download="Balamugundan_Resume.pdf" class="btn download-resume-btn">DOWNLOAD RESUME</a>
-          <a href="Balamugundan_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn">VIEW RESUME ONLINE &rarr;</a>
+          <a href="/resume.html" download="resume.html" class="btn download-resume-btn">DOWNLOAD RESUME</a>
+          <a href="/resume.html" target="_blank" rel="noopener noreferrer" class="btn">VIEW RESUME ONLINE &rarr;</a>
         </div>
       </div>
     </section>
@@ -426,6 +426,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>
